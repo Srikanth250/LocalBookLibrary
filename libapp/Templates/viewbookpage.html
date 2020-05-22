@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<br>
+<div class="text-center">
+	<h1> View Book Details </h1>
+</div>
+<br>
+
+<form action="/viewbook/" method="POST">
+	{% csrf_token %}
+	
+	<br>
+	
+	<p><label> Book Title <span style="color:red">*</span> </label></p>
+	<p>
+		<input type="text" name="book_title" placeholder="Book Title" class="form-control"> </input>
+	</p>
+	<br>
+	
+	<button type="submit" class="btn btn-success"> Submit </button>
+</form>
+
+{% endblock %}

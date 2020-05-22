@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<br>
+<div class="text-center">
+	<h1> Add Your Book Details </h1>
+</div>
+<br>
+
+<form action="/addbook/" method="POST">
+{% csrf_token %}
+
+	<p><label> Title <span style="color:red">*</span> </label></p>
+	<p>
+		<input type="text" name="title" placeholder="Title" class="form-control"> </input>
+	</p>
+	<br>
+	
+	<p><label> ISBN <span style="color:red">*</span> </label></p>
+	<p>
+		<input type="tel" name="isbn" placeholder="ISBN" class="form-control"> </input>
+	</p>
+	<br>
+	
+	<p><label> Author <span style="color:red">*</span> </label></p>
+	<p>
+		<input type="tel" name="auth" placeholder="Author" class="form-control"> </input>
+	</p>
+	<br>
+	
+	<p><label> Category <span style="color:red">*</span> </label></p>
+	<p>
+		<input type="text" name="cat" placeholder="Category" class="form-control"> </input>
+	</p>
+	<br>
+	
+	<div class="text-center">
+		<button type="submit" class="btn btn-success"> Submit </button>
+	</div>
+</form>
+
+{% endblock %}

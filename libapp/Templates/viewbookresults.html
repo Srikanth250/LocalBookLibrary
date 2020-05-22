@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+		<br>
+		<div class="text-center">
+			<h1> Book Details </h1>
+			<br>
+			
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Title</th>
+						<th scope="col">ISBN</th>
+						<th scope="col">Author</th>
+						<th scope="col">Category</th>
+						<th scope="col">Published Date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+							<td>{{books.title}}</td>
+							<td>{{books.isbn}}</td>
+							<td>{{books.author}}</td>
+							<td>{{books.category}}</td>
+							<td>{{books.pub_date}}</td>
+					</tr>
+				</tbody>
+			</table>
+		
+			<br><br>
+			<div class = "row">
+				<div class="col-md-6">
+					<a href="/edit/{{books.id}}" class="btn btn-success btn-lg btn-block"> Edit </a>
+				</div>
+				<div class="col-md-6">
+					<a href="/delete/{{books.id}}" class="btn btn-danger btn-lg btn-block"> Delete </a>
+				</div>
+			</div>
+	
+{% endblock %}
